@@ -40,7 +40,7 @@ app.post("/login", function (req, res, next) {
 
 app.get("/", function (req, res, next) {
   var sql =
-    "SELECT employee_id, first_name, last_name, email, phone_number, hire_date, jobs.job_title , salary, manager_id,departments.department_name " +
+    "SELECT employee_id, first_name, last_name, email, phone_number, jobs.job_title , salary, manager_id,departments.department_name " +
     "FROM employees " +
     "LEFT JOIN " +
     "departments " +
