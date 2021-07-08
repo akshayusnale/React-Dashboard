@@ -16,13 +16,11 @@ app.set("port", process.env.PORT || 9000);
 app.post("/login", function (req, res, next) {
   const username = req.body.username;
   const password = req.body.password;
-  console.log(username + " // "+ password);
 
   client.query(
     'select * from users where user_name = \''+username+'\' and password = \''+password+'\'',
     (err, result) => {
       if (err) {
-        console.log("1");
         console.log(err);
         res.status(400).send(err);
         return;
