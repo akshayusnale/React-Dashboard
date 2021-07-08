@@ -15,7 +15,7 @@ export default function Login() {
       password : password,
     }).then((response) => {
       if (response.status === 200) {
-        history.push('/demo');
+        history.push('/table');
     }
       
     }, (error) => {
